@@ -39,11 +39,11 @@ final_x75_90 <- subset(full_x75_90, as.character(full_x75_90$query_parent) != fu
 above90 <- as.data.frame(unique(final_x75_90$query_id))
 colnames(above90)[1]<-"query_id"
 
-pegs <- read.csv("List2_Pegs_renamed.csv")
+pegs <- read.csv("List2_Pegs.csv")
 colnames(pegs)[1]<-"query_id"
 above90pegs <- merge(pegs,above90,by="query_id")
 
-megs <- read.csv("List1_Megs_renamed.csv")
+megs <- read.csv("List1_Megs.csv")
 colnames(megs)[1]<-"query_id"
 above90megs <- merge(megs,above90,by="query_id")
 
